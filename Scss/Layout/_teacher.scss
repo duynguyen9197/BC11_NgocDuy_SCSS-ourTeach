@@ -1,0 +1,44 @@
+.myTeacher {
+  background-color: $color-gray-1;
+  .teacher_content {
+    z-index: 3;
+    .row {
+      .teacher_item {
+        border-radius: 10px;
+        background-color: $color-white-bg;
+        padding: 0;
+        margin-bottom: $mg-2;
+        overflow: hidden;
+        &:hover {
+          box-shadow: 0 30px 30px -10px $color-border-bottom;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          transition: 0.5s;
+          &:hover {
+            transform: scale3d(1.05, 1.05, 1.05);
+          }
+        }
+        .teacher_text {
+          text-align: center;
+          span {
+            @include styleText($fs-8, $fw-2, $color-purple-1);
+          }
+          h1 {
+            @include styleText($fs-8 * 2, $fw-3, $color-black-1);
+          }
+          p {
+            @include styleText($fs-1 + 2, $fw-1, $color-black-1);
+          }
+        }
+      }
+    }
+  }
+  .teacher-img-cover {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

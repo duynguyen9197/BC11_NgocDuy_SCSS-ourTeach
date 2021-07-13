@@ -1,0 +1,73 @@
+.myForm {
+  .form_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    position: relative;
+    top: 200px;
+    @include responsive("large-down") {
+      flex-direction: column;
+    }
+    .form_input {
+      width: 35%;
+      @include responsive("extra-large-down") {
+        width: 45%;
+      }
+      @include responsive("large-down") {
+        width: 100%;
+      }
+      form {
+        background-color: $color-white-bg;
+        border-radius: 10px;
+        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+        padding: $pd-4;
+        .Form_header {
+          @include styleText($fs-7, $fw-3, $color-black-1);
+          margin-bottom: $mg-4;
+        }
+        .row {
+          justify-content: space-between;
+          align-items: center;
+          padding: $pd-4;
+          .col-5 {
+            flex: 0 0 50%;
+            max-width: 45%;
+          }
+          .form_ipt_border {
+            @include styleInput($color-border-bottom, "");
+            @include styleText($fs-1, $fw-1, $color-black-1);
+            padding: $pd-3;
+            margin: $mg-1;
+            input {
+              width: 70%;
+              border: none;
+            }
+            select {
+              width: 85%;
+            }
+            i {
+              color: $color-purple-1;
+              margin-right: $mg-2 / 2;
+            }
+          }
+          .form_ipt_border:last-child {
+            i {
+              position: absolute;
+              top: 20%;
+            }
+            textarea {
+              margin-left: $mg-2;
+            }
+          }
+        }
+      }
+    }
+  }
+  .form-img-cover {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

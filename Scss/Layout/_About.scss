@@ -1,0 +1,32 @@
+.About {
+  .About-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    @include responsive("large-down") {
+      flex-direction: column;
+    }
+    .About_text {
+      span {
+        @include styleText($fs-4, $fw-2, $color-purple-1);
+      }
+      h1 {
+        @include styleText($fs-5, $fw-3, $color-black-1);
+      }
+    }
+    .About_img {
+      flex-shrink: 0;
+    }
+  }
+  .About-yellow {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+  }
+  .About-img-cover {
+    img {
+      width: 100%;
+    }
+  }
+}

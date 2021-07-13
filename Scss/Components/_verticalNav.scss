@@ -1,0 +1,36 @@
+@include responsive("extra-large-down") {
+  .vertical {
+    display: flex;
+  }
+  header {
+    flex: 0 0 35%;
+    overflow: hidden;
+    transition: 0.5s;
+    .myNav {
+      margin-left: 0 !important;
+    }
+  }
+
+  .navbar-collapse {
+    background-color: $color-white-bg;
+    width: 100%;
+    text-align: center;
+  }
+  .About {
+    .Trigger {
+      background-color: $color-white-bg;
+      display: block;
+      .btn_trigger {
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      .navbar-toggler {
+        display: none;
+      }
+    }
+  }
+}
+.Trigger {
+  display: none;
+}

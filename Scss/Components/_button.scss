@@ -1,0 +1,36 @@
+.myBtn_Purple {
+  @include styleText($fs-2, $fw-1, $color-white-bg);
+  @include StyleBtn_input($color-purple-1);
+}
+
+.myNav {
+  .myBtn {
+    @include styleText($fs-2, $fw-1, $color-white-bg);
+    @include StyleBtn_input($color-purple-1);
+  }
+}
+footer {
+  .footer_content {
+    form {
+      padding-right: 40px;
+      .ipt_email {
+        @include styleText($fs-2, $fw-1, $color-white-bg);
+        @include styleInput($color-border-input, $color-white-bg);
+        width: 100%;
+        padding: 10px 20px;
+      }
+      .btn_Sub {
+        @extend .ipt_email;
+        margin: 10px !important;
+        @include styleText($fs-2, $fw-1, $color-purple-1);
+        @include StyleBtn_input($color-white-bg);
+      }
+    }
+  }
+}
+form {
+  .btn_form {
+    @extend .myBtn_Purple;
+    width: 30%;
+  }
+}

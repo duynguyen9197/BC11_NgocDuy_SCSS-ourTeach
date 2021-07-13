@@ -1,0 +1,25 @@
+body {
+  font-family: $font-family-2;
+  color: $color-black-2;
+  background-color: $color-white-bg;
+  line-height: $line-height-1;
+
+  background: {
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+i {
+  margin-right: $mg-2;
+}
+li {
+  list-style-type: none;
+}
+select,
+textarea {
+  border: none;
+}

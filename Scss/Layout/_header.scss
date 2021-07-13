@@ -1,0 +1,35 @@
+header {
+  .myNav {
+    @include responsive("extra-large-down") {
+      height: 48px;
+      justify-content: flex-start;
+      margin-left: $mg-3;
+      .navbar-brand {
+        height: 100%;
+        img {
+          height: inherit;
+        }
+      }
+    }
+    padding: 0;
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          padding-right: $pd-1;
+          &:last-of-type {
+            padding-right: 0;
+          }
+          .nav-link {
+            @include styleText($fs-1, $fw-2, $color-black-2);
+            @include styleHover($color-purple-1);
+          }
+        }
+      }
+      .social--icon {
+        i {
+          @include styleHover($color-purple-1);
+        }
+      }
+    }
+  }
+}

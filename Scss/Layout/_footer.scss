@@ -1,0 +1,39 @@
+footer {
+  background: {
+    image: url(./../images/footer_background.jpg);
+    size: cover;
+    position: center top;
+    repeat: no-repeat;
+  }
+  .footer_content {
+    padding: $pd-5 0;
+
+    h2 {
+      @include styleText($fs-6, $fw-3, $color-white-bg);
+    }
+    ul {
+      padding: 0;
+      li,
+      a {
+        @include styleText($fs-1 + 2, $fw-1, $color-white-bg);
+        text-decoration: none;
+      }
+      li:last-child {
+        i:hover {
+          color: $color-black-1;
+        }
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+    }
+    .footer_link {
+      li {
+        border-bottom: 1px solid $color-border-bottom;
+        line-height: 1;
+        padding: 0.8em 0;
+      }
+    }
+  }
+}

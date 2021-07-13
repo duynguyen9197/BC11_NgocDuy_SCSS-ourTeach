@@ -1,0 +1,10 @@
+.myNav {
+  .navbar-toggler {
+    &:hover {
+      @include styleHover($color-purple-1);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
