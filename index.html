@@ -123,114 +123,7 @@
     <!-- teacher here -->
     <section class="myTeacher">
       <div class="teacher_content container">
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <div class="teacher_item">
-              <img src="./images/teacher_2.jpg" />
-              <div class="teacher_text">
-                <span>ITALIAN</span>
-                <h1>Roberts</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus, nesciunt.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="teacher_item">
-              <img src="./images/teacher_1.jpg" />
-              <div class="teacher_text">
-                <span>ITALIAN</span>
-                <h1>July Roberts</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus, nesciunt.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="teacher_item">
-              <img src="./images/teacher_3.jpg" />
-              <div class="teacher_text">
-                <span>SPANISH</span>
-                <h1>Mark Lee</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus, nesciunt.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="teacher_item">
-              <img src="./images/teacher_4.jpg" />
-              <div class="teacher_text">
-                <span>SWEDEN</span>
-                <h1>Emma Stone</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus, nesciunt.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <div class="teacher_item">
-              <img src="./images/teacher_5.jpg" />
-              <div class="teacher_text">
-                <span>ITALIAN</span>
-                <h1>Roberts</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus, nesciunt.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="teacher_item">
-              <img src="./images/teacher_6.jpg" />
-              <div class="teacher_text">
-                <span>ITALIAN</span>
-                <h1>July Roberts</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus, nesciunt.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="teacher_item">
-              <img src="./images/teacher_7.jpg" />
-              <div class="teacher_text">
-                <span>SPANISH</span>
-                <h1>Mark Lee</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus, nesciunt.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="teacher_item">
-              <img src="./images/teacher_8.jpg" />
-              <div class="teacher_text">
-                <span>SWEDEN</span>
-                <h1>Emma Stone</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Delectus, nesciunt.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row" id="listTeacher"></div>
       </div>
       <div class="teacher-img-cover">
         <img src="./images/Wave_White_bottom_right_shape_01.png" />
@@ -364,5 +257,10 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!-- main js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="./models/user.js"></script>
+    <script src="./services/userService.js"></script>
+    <script src="./controller/main.js"></script>
   </body>
 </html>
