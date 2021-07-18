@@ -71,12 +71,7 @@ async function createUser(id) {
   // check valid here
   var isValid = true;
   console.log(isValid);
-  // ==taiKhoan
-  isValid &= valid.kiemTraRong(
-    _taiKhoan,
-    "messTaiKhoan",
-    "Không được để trống ô này !!!"
-  );
+
   console.log(isValid);
   // ==_hoTen
   isValid &=
@@ -123,12 +118,20 @@ async function createUser(id) {
   // // =========================================
   // // kiem tra Trung Asyn Await
   var result = await service.getUserServiceApi();
-  isValid &= valid.kiemTraTrung(
-    _taiKhoan,
-    "messTaiKhoan",
-    "Tài Khoản Trùng !!!",
-    result.data
-  );
+  // ==taiKhoan
+  isValid &=
+    valid.kiemTraRong(
+      _taiKhoan,
+      "messTaiKhoan",
+      "Không được để trống ô này !!!"
+    ) &&
+    valid.kiemTraTrung(
+      _taiKhoan,
+      "messTaiKhoan",
+      "Tài Khoản Trùng !!!",
+      result.data
+    );
+
   console.log(isValid);
   // ==========
   if (isValid) {
@@ -150,7 +153,7 @@ async function createUser(id) {
 // feature Thêm user
 async function AddUser() {
   var user = await createUser("");
-
+  if (!user) return;
   service
     .addUserServiceApi(user)
     .then(function () {
@@ -200,6 +203,7 @@ function editUser(id) {
 // feature Update User
 async function UpdateUser(id) {
   var user = await createUser(id);
+  if (!user) return;
   service
     .putUserService(user, id)
     .then(function () {
